@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F048EEE017590171005A1E0E /* InfoPlist.strings */; };
+		F048EEE917590171005A1E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEE217590171005A1E0E /* main.m */; };
+		F048EF01175904F6005A1E0E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEEF175904F6005A1E0E /* AFHTTPClient.m */; };
+		F048EF02175904F6005A1E0E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEF1175904F6005A1E0E /* AFHTTPRequestOperation.m */; };
+		F048EF03175904F6005A1E0E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEF3175904F6005A1E0E /* AFImageRequestOperation.m */; };
+		F048EF04175904F6005A1E0E /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEF5175904F6005A1E0E /* AFJSONRequestOperation.m */; };
+		F048EF05175904F6005A1E0E /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEF7175904F6005A1E0E /* AFNetworkActivityIndicatorManager.m */; };
+		F048EF06175904F6005A1E0E /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEFA175904F6005A1E0E /* AFPropertyListRequestOperation.m */; };
+		F048EF07175904F6005A1E0E /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEFC175904F6005A1E0E /* AFURLConnectionOperation.m */; };
+		F048EF08175904F6005A1E0E /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEFE175904F6005A1E0E /* AFXMLRequestOperation.m */; };
+		F048EF09175904F6005A1E0E /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EF00175904F6005A1E0E /* UIImageView+AFNetworking.m */; };
+		F048EF0B1759051D005A1E0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */; };
+		F048EF0D17590536005A1E0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0C17590536005A1E0E /* SystemConfiguration.framework */; };
+		F048EF0F17590551005A1E0E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0E17590551005A1E0E /* CoreLocation.framework */; };
+		F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA881759076700A09038 /* Default-568h@2x.png */; };
+		F0C8CA8C1759076700A09038 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA891759076700A09038 /* Default.png */; };
+		F0C8CA8D1759076700A09038 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA8A1759076700A09038 /* Default@2x.png */; };
+		F0C8CA90175919F100A09038 /* ZFInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA8F175919F100A09038 /* ZFInterface.m */; };
+		F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA9217591DF000A09038 /* ZFClientAPI.m */; };
+		F0C8CA96175920E500A09038 /* ZFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA95175920E500A09038 /* ZFViewController.m */; };
+		F0FC22671758F967005F804C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22661758F967005F804C /* UIKit.framework */; };
+		F0FC22691758F967005F804C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22681758F967005F804C /* Foundation.framework */; };
+		F0FC226B1758F967005F804C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC226A1758F967005F804C /* CoreGraphics.framework */; };
+		F0FC22901758FCD6005F804C /* ZFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC22861758FCB8005F804C /* ZFAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F048EEE117590171005A1E0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F048EEE217590171005A1E0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
+		F048EEE417590171005A1E0E /* ZFOpenWeatherMap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZFOpenWeatherMap-Prefix.pch"; sourceTree = "<group>"; };
+		F048EEEE175904F6005A1E0E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		F048EEEF175904F6005A1E0E /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		F048EEF0175904F6005A1E0E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		F048EEF1175904F6005A1E0E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		F048EEF2175904F6005A1E0E /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		F048EEF3175904F6005A1E0E /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		F048EEF4175904F6005A1E0E /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		F048EEF5175904F6005A1E0E /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		F048EEF6175904F6005A1E0E /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		F048EEF7175904F6005A1E0E /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		F048EEF8175904F6005A1E0E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		F048EEF9175904F6005A1E0E /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		F048EEFA175904F6005A1E0E /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		F048EEFB175904F6005A1E0E /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		F048EEFC175904F6005A1E0E /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		F048EEFD175904F6005A1E0E /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		F048EEFE175904F6005A1E0E /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		F048EEFF175904F6005A1E0E /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		F048EF00175904F6005A1E0E /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F048EF0C17590536005A1E0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F048EF0E17590551005A1E0E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F0C8CA881759076700A09038 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F0C8CA891759076700A09038 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F0C8CA8A1759076700A09038 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F0C8CA8E175919F100A09038 /* ZFInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFInterface.h; sourceTree = "<group>"; };
+		F0C8CA8F175919F100A09038 /* ZFInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFInterface.m; sourceTree = "<group>"; };
+		F0C8CA9117591DF000A09038 /* ZFClientAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFClientAPI.h; sourceTree = "<group>"; };
+		F0C8CA9217591DF000A09038 /* ZFClientAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFClientAPI.m; sourceTree = "<group>"; };
+		F0C8CA94175920E500A09038 /* ZFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFViewController.h; sourceTree = "<group>"; };
+		F0C8CA95175920E500A09038 /* ZFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFViewController.m; sourceTree = "<group>"; };
+		F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFOpenWeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FC22661758F967005F804C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F0FC22681758F967005F804C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F0FC226A1758F967005F804C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F0FC22851758FCB7005F804C /* ZFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFAppDelegate.h; sourceTree = "<group>"; };
+		F0FC22861758FCB8005F804C /* ZFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0FC22601758F967005F804C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F048EF0F17590551005A1E0E /* CoreLocation.framework in Frameworks */,
+				F048EF0D17590536005A1E0E /* SystemConfiguration.framework in Frameworks */,
+				F048EF0B1759051D005A1E0E /* MobileCoreServices.framework in Frameworks */,
+				F0FC22671758F967005F804C /* UIKit.framework in Frameworks */,
+				F0FC22691758F967005F804C /* Foundation.framework in Frameworks */,
+				F0FC226B1758F967005F804C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F048EEDC17590171005A1E0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F048EEEC175904E8005A1E0E /* Vender */,
+				F0C8CA871759072F00A09038 /* Graphics */,
+				F048EEE017590171005A1E0E /* InfoPlist.strings */,
+				F048EEE217590171005A1E0E /* main.m */,
+				F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */,
+				F048EEE417590171005A1E0E /* ZFOpenWeatherMap-Prefix.pch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F048EEEC175904E8005A1E0E /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				F048EEED175904F6005A1E0E /* AFNetworking */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		F048EEED175904F6005A1E0E /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F048EEEE175904F6005A1E0E /* AFHTTPClient.h */,
+				F048EEEF175904F6005A1E0E /* AFHTTPClient.m */,
+				F048EEF0175904F6005A1E0E /* AFHTTPRequestOperation.h */,
+				F048EEF1175904F6005A1E0E /* AFHTTPRequestOperation.m */,
+				F048EEF2175904F6005A1E0E /* AFImageRequestOperation.h */,
+				F048EEF3175904F6005A1E0E /* AFImageRequestOperation.m */,
+				F048EEF4175904F6005A1E0E /* AFJSONRequestOperation.h */,
+				F048EEF5175904F6005A1E0E /* AFJSONRequestOperation.m */,
+				F048EEF6175904F6005A1E0E /* AFNetworkActivityIndicatorManager.h */,
+				F048EEF7175904F6005A1E0E /* AFNetworkActivityIndicatorManager.m */,
+				F048EEF8175904F6005A1E0E /* AFNetworking.h */,
+				F048EEF9175904F6005A1E0E /* AFPropertyListRequestOperation.h */,
+				F048EEFA175904F6005A1E0E /* AFPropertyListRequestOperation.m */,
+				F048EEFB175904F6005A1E0E /* AFURLConnectionOperation.h */,
+				F048EEFC175904F6005A1E0E /* AFURLConnectionOperation.m */,
+				F048EEFD175904F6005A1E0E /* AFXMLRequestOperation.h */,
+				F048EEFE175904F6005A1E0E /* AFXMLRequestOperation.m */,
+				F048EEFF175904F6005A1E0E /* UIImageView+AFNetworking.h */,
+				F048EF00175904F6005A1E0E /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = Libraries/AFNetworking/AFNetworking;
+			sourceTree = SOURCE_ROOT;
+		};
+		F0C8CA871759072F00A09038 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F0C8CA881759076700A09038 /* Default-568h@2x.png */,
+				F0C8CA891759076700A09038 /* Default.png */,
+				F0C8CA8A1759076700A09038 /* Default@2x.png */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		F0FC225A1758F967005F804C = {
+			isa = PBXGroup;
+			children = (
+				F0FC226C1758F967005F804C /* ZFOpenWeatherMap */,
+				F0FC22831758FAC7005F804C /* ZFOpenWeatherMap-Example */,
+				F048EEDC17590171005A1E0E /* Resources */,
+				F0FC22651758F967005F804C /* Frameworks */,
+				F0FC22641758F967005F804C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0FC22641758F967005F804C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0FC22651758F967005F804C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F048EF0E17590551005A1E0E /* CoreLocation.framework */,
+				F048EF0C17590536005A1E0E /* SystemConfiguration.framework */,
+				F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */,
+				F0FC22661758F967005F804C /* UIKit.framework */,
+				F0FC22681758F967005F804C /* Foundation.framework */,
+				F0FC226A1758F967005F804C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0FC226C1758F967005F804C /* ZFOpenWeatherMap */ = {
+			isa = PBXGroup;
+			children = (
+				F0C8CA8E175919F100A09038 /* ZFInterface.h */,
+				F0C8CA8F175919F100A09038 /* ZFInterface.m */,
+				F0C8CA9117591DF000A09038 /* ZFClientAPI.h */,
+				F0C8CA9217591DF000A09038 /* ZFClientAPI.m */,
+			);
+			path = ZFOpenWeatherMap;
+			sourceTree = "<group>";
+		};
+		F0FC22831758FAC7005F804C /* ZFOpenWeatherMap-Example */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC22851758FCB7005F804C /* ZFAppDelegate.h */,
+				F0FC22861758FCB8005F804C /* ZFAppDelegate.m */,
+				F0C8CA94175920E500A09038 /* ZFViewController.h */,
+				F0C8CA95175920E500A09038 /* ZFViewController.m */,
+			);
+			path = "ZFOpenWeatherMap-Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0FC22621758F967005F804C /* ZFOpenWeatherMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FC22801758F967005F804C /* Build configuration list for PBXNativeTarget "ZFOpenWeatherMap" */;
+			buildPhases = (
+				F0FC225F1758F967005F804C /* Sources */,
+				F0FC22601758F967005F804C /* Frameworks */,
+				F0FC22611758F967005F804C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZFOpenWeatherMap;
+			productName = ZFOpenWeatherMap;
+			productReference = F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0FC225B1758F967005F804C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZF;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ZFOpenWeatherMap;
+			};
+			buildConfigurationList = F0FC225E1758F967005F804C /* Build configuration list for PBXProject "ZFOpenWeatherMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0FC225A1758F967005F804C;
+			productRefGroup = F0FC22641758F967005F804C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0FC22621758F967005F804C /* ZFOpenWeatherMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0FC22611758F967005F804C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */,
+				F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */,
+				F0C8CA8C1759076700A09038 /* Default.png in Resources */,
+				F0C8CA8D1759076700A09038 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0FC225F1758F967005F804C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */,
+				F0FC22901758FCD6005F804C /* ZFAppDelegate.m in Sources */,
+				F048EEE917590171005A1E0E /* main.m in Sources */,
+				F048EF01175904F6005A1E0E /* AFHTTPClient.m in Sources */,
+				F048EF02175904F6005A1E0E /* AFHTTPRequestOperation.m in Sources */,
+				F048EF03175904F6005A1E0E /* AFImageRequestOperation.m in Sources */,
+				F048EF04175904F6005A1E0E /* AFJSONRequestOperation.m in Sources */,
+				F048EF05175904F6005A1E0E /* AFNetworkActivityIndicatorManager.m in Sources */,
+				F048EF06175904F6005A1E0E /* AFPropertyListRequestOperation.m in Sources */,
+				F048EF07175904F6005A1E0E /* AFURLConnectionOperation.m in Sources */,
+				F048EF08175904F6005A1E0E /* AFXMLRequestOperation.m in Sources */,
+				F048EF09175904F6005A1E0E /* UIImageView+AFNetworking.m in Sources */,
+				F0C8CA90175919F100A09038 /* ZFInterface.m in Sources */,
+				F0C8CA96175920E500A09038 /* ZFViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F048EEE017590171005A1E0E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F048EEE117590171005A1E0E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0FC227E1758F967005F804C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F0FC227F1758F967005F804C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0FC22811758F967005F804C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F0FC22821758F967005F804C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0FC225E1758F967005F804C /* Build configuration list for PBXProject "ZFOpenWeatherMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FC227E1758F967005F804C /* Debug */,
+				F0FC227F1758F967005F804C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FC22801758F967005F804C /* Build configuration list for PBXNativeTarget "ZFOpenWeatherMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FC22811758F967005F804C /* Debug */,
+				F0FC22821758F967005F804C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0FC225B1758F967005F804C /* Project object */;
+}
