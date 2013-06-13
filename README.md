@@ -1,8 +1,11 @@
-# ZFOpenWeatherMap Template #
+# ZFOpenWeatherMap Xcode Template #
 
 ### Detailed Overview ###
 ZFOpenWeatherMap is a base template for accessing OpenWeatherMap's API using AFNetworking.
-   
+
+### Dependancies ###
+AFNetworking
+
 ### How To Use ###
 
 ### Contact
