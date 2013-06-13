@@ -57,12 +57,12 @@
 
 - (void)ZFInterfaceCurrentWeather:(NSDictionary *)currentWeather
 {
-    NSLog(@"current %i", [currentWeather count]);
+    NSLog(@"current %@", currentWeather);
 }
 
 - (void)ZFInterfaceForecastWeather:(NSDictionary *)forecastWeather
 {
-    NSLog(@"forecast %i", [forecastWeather count]);
+    NSLog(@"forecast %@", forecastWeather);
 }
 
 @end

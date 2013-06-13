@@ -57,7 +57,6 @@
     
     if (!APIKey) {
         NSLog(@"no api key forecast");
-                                                      //http://api.openweathermap.org/data/2.5/forecast/daily?lat=35&lon=139&cnt=10&mode=json
         urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&cnt=10&mode=json",
                             location.coordinate.latitude,
                             location.coordinate.longitude];
