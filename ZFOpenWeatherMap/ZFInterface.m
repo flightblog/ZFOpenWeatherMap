@@ -42,29 +42,17 @@ NSString * const kCurrentWithoutAPI = @"http://api.openweathermap.org/data/2.3/f
         urlForCurrentWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.3/find/city?lat=%f&lon=%f",
                            location.coordinate.latitude,
                            location.coordinate.longitude];
+        
+        [self getCurrentWithURL:urlForCurrentWX];
+        
     } else {
         urlForCurrentWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.3/find/city?lat=%f&lon=%f&APPID=%@",
                            location.coordinate.latitude,
                            location.coordinate.longitude,
                            kAPIKey];
+        
+        [self getCurrentWithURL:urlForCurrentWX];
     }
-    
-    
-    NSURLRequest *requestOWM = [NSURLRequest requestWithURL:[NSURL URLWithString:urlForCurrentWX]];
-    
-    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
-    AFJSONRequestOperation *operationCurrent = [AFJSONRequestOperation JSONRequestOperationWithRequest:requestOWM
-                                                                                               success:^(NSURLRequest *requestOWM, NSHTTPURLResponse *response2, id responseJSONOWM) {
-                                                                                                   //NSLog(@"current %@", [NSDictionary dictionaryWithDictionary:responseJSONOWM]);
-        if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
-            [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:responseJSONOWM]];
-        }
-                                                                                                   
-                                                                                               }
-                                                                                               failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                                                                   NSLog(@"%@", [error userInfo]);
-                                                                                               }];
-    [operationCurrent start];
 }
 
 - (void)retreiveForecastWeatherWithLocation:(CLLocation *)location APIKey:(NSString *)APIKey
@@ -74,31 +62,54 @@ NSString * const kCurrentWithoutAPI = @"http://api.openweathermap.org/data/2.3/f
     if (!APIKey) {
         NSLog(@"no api key forecast");
         
-        urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/forecast/city?lat=%f&lon=%f?mode=daily_compact",
+        urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.3/forecast//city?lat=%f&lon=%f?mode=daily_compact",
                             location.coordinate.latitude,
                             location.coordinate.longitude];
+        
+        [self getForecastWithURL:urlForForecastWX];
+        
     } else {
-        urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/forecast/city?lat=%f&lon=%f?mode=daily_compact&APPID=%@",
+        urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.3/forecast/city?lat=%f&lon=%f?mode=daily_compact&APPID=%@",
                             location.coordinate.latitude,
                             location.coordinate.longitude,
                             kAPIKey];
+        
+        [self getForecastWithURL:urlForForecastWX];
     }
+}
+
+
+- (void)getCurrentWithURL:(NSString *)currentURL
+{
+    NSURLRequest *requestOWM = [NSURLRequest requestWithURL:[NSURL URLWithString:currentURL]];
     
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
+    AFJSONRequestOperation *operationCurrent = [AFJSONRequestOperation JSONRequestOperationWithRequest:requestOWM
+                                                                                               success:^(NSURLRequest *requestOWM, NSHTTPURLResponse *response2, id responseJSONOWM) {
+                                                                                                   //NSLog(@"current %@", [NSDictionary dictionaryWithDictionary:responseJSONOWM]);
+                                                                                                   if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
+                                                                                                       [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:responseJSONOWM]];
+                                                                                                   }
+                                                                                                   
+                                                                                               }
+                                                                                               failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                                   NSLog(@"%@", [error userInfo]);
+                                                                                               }];
+    [operationCurrent start];
+}
+
+- (void)getForecastWithURL:(NSString *)forecast
+{
     
-    NSString *urlOWMForecast = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.3/find/city?lat=%f&lon=%f&APPID=%@",
-                                location.coordinate.latitude,
-                                location.coordinate.longitude,
-                                kAPIKey];
-    
-    NSURLRequest *requestForecast = [NSURLRequest requestWithURL:[NSURL URLWithString:urlOWMForecast]];
-    
+    NSURLRequest *requestForecast = [NSURLRequest requestWithURL:[NSURL URLWithString:forecast]];
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
     AFJSONRequestOperation *operationForecast = [AFJSONRequestOperation JSONRequestOperationWithRequest:requestForecast
                                                                                                 success:^(NSURLRequest *requestOWM, NSHTTPURLResponse *response2, id responseJSONOWM) {
                                                                                                     //NSLog(@"forecast %@", responseJSONOWM);
                                                                                                     
-                if ([self.delegate respondsToSelector:@selector(ZFInterfaceForecastWeather:)]) {
-                    [self.delegate ZFInterfaceForecastWeather:responseJSONOWM];
-                }
+                                                                                                    if ([self.delegate respondsToSelector:@selector(ZFInterfaceForecastWeather:)]) {
+                                                                                                        [self.delegate ZFInterfaceForecastWeather:responseJSONOWM];
+                                                                                                    }
                                                                                                     
                                                                                                 }
                                                                                                 failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
