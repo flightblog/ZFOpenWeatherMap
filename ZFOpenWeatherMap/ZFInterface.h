@@ -16,8 +16,13 @@
 @end
 
 @interface ZFInterface : NSObject
-- (id)initWithDelegate:(id<ZFInterfaceDelegate>)delegate;
-- (void)retreiveCurrentWeatherWithLocation:(CLLocation *)location APIKey:(NSString *)APIKey;
-- (void)retreiveForecastWeatherWithLocation:(CLLocation *)location APIKey:(NSString *)APIKey;
+
+
+- (id)initWithDelegate:(id<ZFInterfaceDelegate>)delegate
+              location:(CLLocation *)location
+                APIKey:(NSString *)APIKey;
+
+- (void)retreiveCurrentWeather;
+- (void)retreiveForecastWeather;
 
 @end

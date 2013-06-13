@@ -12,6 +12,8 @@
 
 @interface ZFInterface ()
 @property (nonatomic, strong) id delegate;
+@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, copy) NSString *APIKey;
 @end
 
 @implementation ZFInterface
@@ -19,55 +21,59 @@
 #pragma mark - Properties
 
 - (id)initWithDelegate:(id<ZFInterfaceDelegate>)delegate
+              location:(CLLocation *)location
+                APIKey:(NSString *)APIKey
 {
     self = [super init];
     if (self) {
         self.delegate = delegate;
+        self.location = location;
+        self.APIKey = APIKey;
     }
     return self;
 }
 
 
-- (void)retreiveCurrentWeatherWithLocation:(CLLocation *)location APIKey:(NSString *)APIKey
+- (void)retreiveCurrentWeather
 {
     NSString *urlForCurrentWX;
     
-    if (!APIKey) {
+    if (!_APIKey) {
         NSLog(@"no api key current");
         
         urlForCurrentWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f",
-                           location.coordinate.latitude,
-                           location.coordinate.longitude];
+                           _location.coordinate.latitude,
+                           _location.coordinate.longitude];
         
         [self getCurrentWithURL:urlForCurrentWX];
         
     } else {
         urlForCurrentWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&APPID=%@",
-                           location.coordinate.latitude,
-                           location.coordinate.longitude,
-                           APIKey];
+                           _location.coordinate.latitude,
+                           _location.coordinate.longitude,
+                           _APIKey];
         
         [self getCurrentWithURL:urlForCurrentWX];
     }
 }
 
-- (void)retreiveForecastWeatherWithLocation:(CLLocation *)location APIKey:(NSString *)APIKey
+- (void)retreiveForecastWeather
 {
     NSString *urlForForecastWX;
     
-    if (!APIKey) {
+    if (!_APIKey) {
         NSLog(@"no api key forecast");
         urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&cnt=10&mode=json",
-                            location.coordinate.latitude,
-                            location.coordinate.longitude];
+                            _location.coordinate.latitude,
+                            _location.coordinate.longitude];
         
         [self getForecastWithURL:urlForForecastWX];
         
     } else {
         urlForForecastWX = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&cnt=10&mode=json&APPID=%@",
-                            location.coordinate.latitude,
-                            location.coordinate.longitude,
-                            APIKey];
+                            _location.coordinate.latitude,
+                            _location.coordinate.longitude,
+                            _APIKey];
         
         [self getForecastWithURL:urlForForecastWX];
     }
