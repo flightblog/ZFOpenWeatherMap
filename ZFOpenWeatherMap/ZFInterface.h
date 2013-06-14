@@ -16,7 +16,7 @@
 @end
 
 @interface ZFInterface : NSObject
-@property int weatherCacheInSeconds;
+@property int cacheInSeconds;
 
 - (id)initWithDelegate:(id<ZFInterfaceDelegate>)delegate
               location:(CLLocation *)location

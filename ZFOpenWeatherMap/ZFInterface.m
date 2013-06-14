@@ -90,7 +90,7 @@
         self.delegate = delegate;
         self.location = location;
         self.APIKey = APIKey;
-        self.weatherCacheInSeconds = 100;
+        _cacheInSeconds = 3600;
     }
     return self;
 }
@@ -104,7 +104,7 @@
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"currentJSON.plist"];
     
     if (![NSDictionary dictionaryWithContentsOfFile:cachedWX]) {
-        NSLog(@"no current cache");
+        NSLog(@"current:no current cache");
         
         if (!_APIKey) {
             [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
@@ -119,10 +119,10 @@
         NSDate *now = [NSDate new];
         NSTimeInterval diff = [now timeIntervalSinceDate:reportTimeStamp];
         
-        NSLog(@"current cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
+        NSLog(@"current:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
         
-        if (diff > 1800) {
-            NSLog(@"greater then 1800");
+        if (diff > _cacheInSeconds) {
+            NSLog(@"accessing network");
             
             if (!_APIKey) {
                 [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
@@ -130,7 +130,7 @@
                 [self getCurrentWithURL:self.urlForCurrentWXwithAPIKey];
             }
         } else {
-            NSLog(@"less than 1800");
+            NSLog(@"current:using cache");
             if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
                 [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:cachedWX]]];
             }
@@ -153,16 +153,19 @@
         }
         
     } else {
-        int cacheUnixTimestamp = [[[NSDictionary dictionaryWithContentsOfFile:cachedWX] objectForKey:@"dt"] intValue];
+        
+        int cacheUnixTimestamp = [[[NSUserDefaults standardUserDefaults] valueForKey:@"forecastTimestamp"] intValue];
+        
+        //int cacheUnixTimestamp = [[[NSDictionary dictionaryWithContentsOfFile:cachedWX] objectForKey:@"dt"] intValue];
         NSTimeInterval timeInterval = (NSTimeInterval)cacheUnixTimestamp;
         NSDate *reportTimeStamp = [NSDate dateWithTimeIntervalSince1970:timeInterval];
         NSDate *now = [NSDate new];
         NSTimeInterval diff = [now timeIntervalSinceDate:reportTimeStamp];
         
-        NSLog(@"forecast cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
+        NSLog(@"forecast:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
         
-        if (diff > 1800) {
-            NSLog(@"greater then 1800");
+        if (diff > _cacheInSeconds) {
+            NSLog(@"forecast:accessing network");
             
             if (!_APIKey) {
                 [self getForecastWithURL:self.urlForForecastWXwithoutAPIKey];
@@ -170,7 +173,7 @@
                 [self getForecastWithURL:self.urlForForecastWXwithAPIKey];
             }
         } else {
-            NSLog(@"less than 1800");
+            NSLog(@"forecast:using cache");
             if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
                 [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:cachedWX]]];
             }
@@ -182,7 +185,7 @@
 
 - (void)getCurrentWithURL:(NSString *)currentURL
 {
-//    NSLog(@"current %@", currentURL);
+    NSLog(@"current %@", currentURL);
 
     NSURLRequest *requestOWM = [NSURLRequest requestWithURL:[NSURL URLWithString:currentURL]];
     
@@ -195,6 +198,8 @@
                                                                                                    NSString *documentsDir = [self.paths objectAtIndex:0];
                                                                                                    NSString *fullPath = [documentsDir stringByAppendingPathComponent:@"currentJSON.plist"];
                                                                                                    [responseJSONOWM writeToFile:fullPath  atomically:YES];
+                                                                                                 
+                                                                                                   
                                                                                                    
                                                                                                    if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
                                                                                                        [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:responseJSONOWM]];
@@ -209,7 +214,7 @@
 
 - (void)getForecastWithURL:(NSString *)forecast
 {
-//    NSLog(@"forecast %@", forecast);
+    NSLog(@"forecast %@", forecast);
     
     NSURLRequest *requestForecast = [NSURLRequest requestWithURL:[NSURL URLWithString:forecast]];
     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
@@ -221,6 +226,12 @@
                                                                                                     NSString *documentsDir = [self.paths objectAtIndex:0];
                                                                                                     NSString *fullPath = [documentsDir stringByAppendingPathComponent:@"forecastJSON.plist"];
                                                                                                     [responseJSONOWM writeToFile:fullPath  atomically:YES];
+                                                                                                   
+                                                                                                    NSTimeInterval timeInMiliseconds = [[NSDate date] timeIntervalSince1970];
+                                                                                                    NSLog(@"now %f", timeInMiliseconds);
+                                                                                                
+                                                                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:timeInMiliseconds] forKey:@"forecastTimestamp"];
+                                                                [[NSUserDefaults standardUserDefaults] synchronize];
                                                                                                     
                                                                                                     if ([self.delegate respondsToSelector:@selector(ZFInterfaceForecastWeather:)]) {
                                                                                                         [self.delegate ZFInterfaceForecastWeather:responseJSONOWM];
