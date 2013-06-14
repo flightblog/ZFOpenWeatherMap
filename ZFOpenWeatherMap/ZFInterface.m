@@ -95,7 +95,6 @@
     return self;
 }
 
-
 #pragma mark - Retrieve Weather Methods
 
 - (void)retreiveCurrentWeather
