@@ -104,8 +104,6 @@
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"currentJSON.plist"];
     
     if (![NSDictionary dictionaryWithContentsOfFile:cachedWX]) {
-        NSLog(@"current:no current cache");
-        
         if (!_APIKey) {
             [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
         } else {
@@ -122,7 +120,7 @@
         NSLog(@"current:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
         
         if (diff > _cacheInSeconds) {
-            NSLog(@"accessing network");
+            NSLog(@"current:accessing network");
             
             if (!_APIKey) {
                 [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
@@ -144,8 +142,6 @@
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"forecastJSON.plist"];
     
     if (![NSDictionary dictionaryWithContentsOfFile:cachedWX]) {
-        NSLog(@"no forecast cache");
-        
         if (!_APIKey) {
             [self getForecastWithURL:self.urlForForecastWXwithoutAPIKey];
         } else {
@@ -228,7 +224,6 @@
                                                                                                     [responseJSONOWM writeToFile:fullPath  atomically:YES];
                                                                                                    
                                                                                                     NSTimeInterval timeInMiliseconds = [[NSDate date] timeIntervalSince1970];
-                                                                                                    NSLog(@"now %f", timeInMiliseconds);
                                                                                                 
                                                                 [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:timeInMiliseconds] forKey:@"forecastTimestamp"];
                                                                 [[NSUserDefaults standardUserDefaults] synchronize];
