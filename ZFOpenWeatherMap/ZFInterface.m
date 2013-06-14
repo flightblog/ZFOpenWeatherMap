@@ -147,9 +147,9 @@
         NSLog(@"no forecast cache");
         
         if (!_APIKey) {
-            [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
+            [self getForecastWithURL:self.urlForForecastWXwithoutAPIKey];
         } else {
-            [self getCurrentWithURL:self.urlForCurrentWXwithAPIKey];
+            [self getForecastWithURL:self.urlForForecastWXwithAPIKey];
         }
         
     } else {
@@ -165,9 +165,9 @@
             NSLog(@"greater then 1800");
             
             if (!_APIKey) {
-                [self getForecastWithURL:self.urlForCurrentWXwithoutAPIKey];
+                [self getForecastWithURL:self.urlForForecastWXwithoutAPIKey];
             } else {
-                [self getForecastWithURL:self.urlForCurrentWXwithAPIKey];
+                [self getForecastWithURL:self.urlForForecastWXwithAPIKey];
             }
         } else {
             NSLog(@"less than 1800");
@@ -209,9 +209,7 @@
 
 - (void)getForecastWithURL:(NSString *)forecast
 {
-   
 //    NSLog(@"forecast %@", forecast);
-    
     
     NSURLRequest *requestForecast = [NSURLRequest requestWithURL:[NSURL URLWithString:forecast]];
     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"text/html", nil]];
