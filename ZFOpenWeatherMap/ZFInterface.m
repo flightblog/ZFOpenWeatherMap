@@ -170,8 +170,8 @@
             }
         } else {
             NSLog(@"forecast:using cache");
-            if ([_delegate respondsToSelector:@selector(ZFInterfaceCurrentWeather:)]) {
-                [_delegate ZFInterfaceCurrentWeather:[NSDictionary dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:cachedWX]]];
+            if ([_delegate respondsToSelector:@selector(ZFInterfaceForecastWeather:)]) {
+                [_delegate ZFInterfaceForecastWeather:[NSDictionary dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:cachedWX]]];
             }
         }
     }
