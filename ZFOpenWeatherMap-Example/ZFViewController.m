@@ -41,10 +41,13 @@
     if (_startingPoint == nil)
         self.startingPoint = newLocation;
     
-    self.location = newLocation;
-    ZFInterface *interface = [[ZFInterface alloc] initWithDelegate:self location:newLocation APIKey:nil];
+
+    ZFInterface *interface = [[ZFInterface alloc] initWithDelegate:self
+                                                          location:newLocation
+                                                            APIKey:nil];
     [interface retreiveCurrentWeather];
     [interface retreiveForecastWeather];
+
     
     [_locationManager stopUpdatingLocation];
 }
