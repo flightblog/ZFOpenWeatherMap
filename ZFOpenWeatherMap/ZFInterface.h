@@ -13,7 +13,6 @@
 @optional
 - (void)ZFInterfaceCurrentWeather:(NSDictionary *)currentWeather;
 - (void)ZFInterfaceForecastWeather:(NSDictionary *)forecastWeather;
-- (void)ZFInterfaceHourlyWeather:(NSDictionary *)hourlyWeather;
 @end
 
 @interface ZFInterface : NSObject
@@ -37,6 +36,5 @@
 
 - (void)retreiveCurrentWeather;
 - (void)retreiveForecastWeather;
-- (void)retreiveHourlyWeather;
 
 @end

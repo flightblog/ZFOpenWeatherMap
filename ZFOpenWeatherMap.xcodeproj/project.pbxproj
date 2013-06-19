@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0132AF3176E2D6600B545D8 /* ZFHourlyWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = F0132AF2176E2B5600B545D8 /* ZFHourlyWeather.m */; };
 		F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F048EEE017590171005A1E0E /* InfoPlist.strings */; };
 		F048EEE917590171005A1E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEE217590171005A1E0E /* main.m */; };
 		F048EF01175904F6005A1E0E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEEF175904F6005A1E0E /* AFHTTPClient.m */; };
@@ -35,8 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F0132AF1176E2B5600B545D8 /* ZFHourlyWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHourlyWeather.h; sourceTree = "<group>"; };
-		F0132AF2176E2B5600B545D8 /* ZFHourlyWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHourlyWeather.m; sourceTree = "<group>"; };
 		F048EEE117590171005A1E0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F048EEE217590171005A1E0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
@@ -192,8 +189,6 @@
 			children = (
 				F0C8CA8E175919F100A09038 /* ZFInterface.h */,
 				F0C8CA8F175919F100A09038 /* ZFInterface.m */,
-				F0132AF1176E2B5600B545D8 /* ZFHourlyWeather.h */,
-				F0132AF2176E2B5600B545D8 /* ZFHourlyWeather.m */,
 				F0C8CA9117591DF000A09038 /* ZFClientAPI.h */,
 				F0C8CA9217591DF000A09038 /* ZFClientAPI.m */,
 			);
@@ -277,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0132AF3176E2D6600B545D8 /* ZFHourlyWeather.m in Sources */,
 				F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */,
 				F0FC22901758FCD6005F804C /* ZFAppDelegate.m in Sources */,
 				F048EEE917590171005A1E0E /* main.m in Sources */,

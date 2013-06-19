@@ -9,9 +9,8 @@
 #import "ZFInterface.h"
 #import "AFNetworking.h"
 #import "ZFClientAPI.h"
-#import "ZFHourlyWeather.h"
 
-@interface ZFInterface () <ZFHourlyWeatherDelegate>
+@interface ZFInterface ()
 @property (nonatomic, strong) id delegate;
 @property (nonatomic, copy) NSArray *paths;
 @property (nonatomic, strong) CLLocation *location;
@@ -175,63 +174,6 @@
             }
         }
     }
-}
-
-- (void)retreiveHourlyWeather
-{
-   
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        ZFHourlyWeather *hour = [[ZFHourlyWeather alloc] init];
-        [hour getHourlyWeatherWithURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139"]];
-        //NSLog(@"be there %@", [hour hourlyWeather]);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //NSLog(@"got it");
-        });
-    });
-    
-    
-
-    
-    
-    
-    
-    
-//    // Retrieve currentWX JSON from disk
-//    NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"currentJSON.plist"];
-//    
-//    if (![NSDictionary dictionaryWithContentsOfFile:cachedWX]) {
-//        if (!_APIKey) {
-//            //[self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
-//        } else {
-//           //[self getCurrentWithURL:self.urlForCurrentWXwithAPIKey];
-//        }
-//        
-//    } else {
-//        int cacheUnixTimestamp = [[[NSDictionary dictionaryWithContentsOfFile:cachedWX] objectForKey:@"dt"] intValue];
-//        NSTimeInterval timeInterval = (NSTimeInterval)cacheUnixTimestamp;
-//        NSDate *reportTimeStamp = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-//        NSDate *now = [NSDate new];
-//        NSTimeInterval diff = [now timeIntervalSinceDate:reportTimeStamp];
-//        
-//        NSLog(@"current:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
-//        
-//        if (diff > _cacheInSeconds) {
-//            NSLog(@"current:accessing network");
-//            
-//            if (!_APIKey) {
-//                //[self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
-//            } else {
-//                //[self getCurrentWithURL:self.urlForCurrentWXwithAPIKey];
-//            }
-//        } else {
-//            NSLog(@"current:using cache");
-//            if ([_delegate respondsToSelector:@selector(ZFInterfaceHourlyWeather:)]) {
-//                [_delegate ZFInterfaceHourlyWeather:[NSDictionary dictionaryWithDictionary:[NSDictionary dictionaryWithContentsOfFile:cachedWX]]];
-//            }
-//        }
-//    }
 }
 
 #pragma mark - Network Connections
