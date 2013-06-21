@@ -44,6 +44,8 @@
     ZFInterface *interface = [[ZFInterface alloc] initWithDelegate:self
                                                           location:newLocation
                                                             APIKey:nil];
+    
+    interface.cacheInSeconds = 1300;
     [interface retreiveCurrentWeather];
     [interface retreiveForecastWeather];
     //[interface retreiveHourlyWeather];

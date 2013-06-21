@@ -99,6 +99,9 @@
 
 - (void)retreiveCurrentWeather
 {
+    
+    NSLog(@"cache %i", _cacheInSeconds);
+    
     // Retrieve currentWX JSON from disk
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"currentJSON.plist"];
     
