@@ -1,15 +1,24 @@
 # ZFOpenWeatherMap Xcode Template #
 
-### Detailed Overview ###.
+### Detailed Overview ###
+ZFOpenWeatherMap is a base template for accessing OpenWeatherMap's API using AFNetworking.
+
+As part of the [Objective-C Hackathon](https://objectivechackathon.appspot.com)
 
 Use at you're own risk. Codebase could change significantly.
-
-ZFOpenWeatherMap is a base template for accessing OpenWeatherMap's API using AFNetworking.
 
 ### Dependancies ###
 AFNetworking
 
 ### How To Use ###
+
+```objective-c
+    ZFInterface *interface = [[ZFInterface alloc] initWithDelegate:self location:newLocation APIKey:nil];
+
+    interface.cacheInSeconds = 1300;
+    [interface retreiveCurrentWeather];
+    [interface retreiveForecastWeather];
+```
 
 ### Contact
 
