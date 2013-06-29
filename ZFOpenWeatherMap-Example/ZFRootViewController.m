@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 ZFOpenWeatherMap. All rights reserved.
 //
 
-#import "ZFViewController.h"
+#import "ZFRootViewController.h"
 #import "ZFInterface.h"
 
-@interface ZFViewController () <CLLocationManagerDelegate>
+@interface ZFRootViewController () <CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, retain) CLLocation *startingPoint;
 @end
 
-@implementation ZFViewController
+@implementation ZFRootViewController
 
 #pragma mark - UIViewController
 

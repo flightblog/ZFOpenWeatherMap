@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZFViewController;
+@class ZFRootViewController;
 
 @interface ZFAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ZFViewController *viewController;
+@property (strong, nonatomic) ZFRootViewController *viewController;
 @end

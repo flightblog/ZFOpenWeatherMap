@@ -12,6 +12,6 @@
 #import "ZFInterface.h"
 
 
-@interface ZFViewController : UIViewController <ZFInterfaceDelegate>
+@interface ZFRootViewController : UIViewController <ZFInterfaceDelegate>
 
 @end
