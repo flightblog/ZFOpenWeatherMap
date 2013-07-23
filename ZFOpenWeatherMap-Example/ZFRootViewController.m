@@ -19,7 +19,7 @@
 
 #pragma mark - UIViewController
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -62,14 +62,14 @@
 
 - (void)ZFInterfaceCurrentWeather:(NSDictionary *)currentWeather
 {
-    //NSLog(@"current %@", currentWeather);
-    NSLog(@"current %i", [currentWeather count]);
+    NSLog(@"current %@", currentWeather);
+    //NSLog(@"current %i", [currentWeather count]);
 }
 
 - (void)ZFInterfaceForecastWeather:(NSDictionary *)forecastWeather
 {
-    //NSLog(@"forecast %@", forecastWeather);
-    NSLog(@"forecast %i", [forecastWeather count]);
+    NSLog(@"forecast %@", forecastWeather);
+    //NSLog(@"forecast %i", [forecastWeather count]);
 }
 
 @end

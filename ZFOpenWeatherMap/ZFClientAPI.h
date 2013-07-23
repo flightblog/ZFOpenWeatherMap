@@ -10,6 +10,6 @@
 
 @interface ZFClientAPI : AFHTTPClient
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 @end

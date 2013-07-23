@@ -81,7 +81,7 @@
 
 #pragma mark - NSObject
 
-- (id)initWithDelegate:(id<ZFInterfaceDelegate>)delegate
+- (instancetype)initWithDelegate:(id<ZFInterfaceDelegate>)delegate
               location:(CLLocation *)location
                 APIKey:(NSString *)APIKey
 {

@@ -13,7 +13,7 @@ NSString * const kOpenWeatherMapBaseURL = @"http://api.openweathermap.org";
 
 @implementation ZFClientAPI
 
-+ (id)sharedInstance {
++ (instancetype)sharedInstance {
     static ZFClientAPI *__sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -22,7 +22,7 @@ NSString * const kOpenWeatherMapBaseURL = @"http://api.openweathermap.org";
     return __sharedInstance;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
+- (instancetype)initWithBaseURL:(NSURL *)url {
     self = [super initWithBaseURL:url];
     if (self) {
         //custom settings
