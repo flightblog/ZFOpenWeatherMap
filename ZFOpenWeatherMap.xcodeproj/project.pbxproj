@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F02A605A17A8B5880052A4A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02A605917A8B5880052A4A1 /* XCTest.framework */; };
 		F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F048EEE017590171005A1E0E /* InfoPlist.strings */; };
 		F048EEE917590171005A1E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEE217590171005A1E0E /* main.m */; };
 		F048EF01175904F6005A1E0E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEEF175904F6005A1E0E /* AFHTTPClient.m */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F02A605917A8B5880052A4A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F048EEE117590171005A1E0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F048EEE217590171005A1E0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02A605A17A8B5880052A4A1 /* XCTest.framework in Frameworks */,
 				F048EF0F17590551005A1E0E /* CoreLocation.framework in Frameworks */,
 				F048EF0D17590536005A1E0E /* SystemConfiguration.framework in Frameworks */,
 				F048EF0B1759051D005A1E0E /* MobileCoreServices.framework in Frameworks */,
@@ -174,6 +177,7 @@
 		F0FC22651758F967005F804C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F02A605917A8B5880052A4A1 /* XCTest.framework */,
 				F048EF0E17590551005A1E0E /* CoreLocation.framework */,
 				F048EF0C17590536005A1E0E /* SystemConfiguration.framework */,
 				F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */,
@@ -365,6 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
 				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
@@ -377,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
 				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
