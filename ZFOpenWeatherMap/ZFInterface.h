@@ -22,7 +22,7 @@
               location:(CLLocation *)location
                 APIKey:(NSString *)APIKey;
 
-- (void)retreiveCurrentWeather;
-- (void)retreiveForecastWeather;
+- (void)retrieveCurrentWeather;
+- (void)retrieveForecastWeather;
 
 @end

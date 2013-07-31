@@ -97,7 +97,7 @@
 
 #pragma mark - Retrieve Weather Methods
 
-- (void)retreiveCurrentWeather
+- (void)retrieveCurrentWeather
 {
     
     NSLog(@"cache %i", _cacheInSeconds);
@@ -138,7 +138,7 @@
     }
 }
 
-- (void)retreiveForecastWeather
+- (void)retrieveForecastWeather
 {
     // Retrieve forecastWX JSON from disk
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"forecastJSON.plist"];

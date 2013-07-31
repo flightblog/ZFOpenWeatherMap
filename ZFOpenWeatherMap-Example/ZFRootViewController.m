@@ -46,9 +46,9 @@
                                                             APIKey:nil];
     
     interface.cacheInSeconds = 1300;
-    [interface retreiveCurrentWeather];
-    [interface retreiveForecastWeather];
-    //[interface retreiveHourlyWeather];
+    [interface retrieveCurrentWeather];
+    [interface retrieveForecastWeather];
+    //[interface retrieveHourlyWeather];
 
     
     [_locationManager stopUpdatingLocation];
