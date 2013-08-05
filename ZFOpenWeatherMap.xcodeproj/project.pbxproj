@@ -28,11 +28,26 @@
 		F0D74A8517B0488A00DA05FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0D74A8017B0488A00DA05FE /* InfoPlist.strings */; };
 		F0D74A8617B0488A00DA05FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D74A8217B0488A00DA05FE /* main.m */; };
 		F0DE348D17A973D500124438 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0DE348C17A973D500124438 /* CFNetwork.framework */; };
+		F0F65F4117A98C33008F87E3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F65F4017A98C33008F87E3 /* XCTest.framework */; };
+		F0F65F4217A98C34008F87E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22681758F967005F804C /* Foundation.framework */; };
+		F0F65F4317A98C34008F87E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22661758F967005F804C /* UIKit.framework */; };
+		F0F65F4917A98C34008F87E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0F65F4717A98C34008F87E3 /* InfoPlist.strings */; };
+		F0F65F4B17A98C34008F87E3 /* ZFOpenWeatherMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F65F4A17A98C34008F87E3 /* ZFOpenWeatherMapTests.m */; };
 		F0FC22671758F967005F804C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22661758F967005F804C /* UIKit.framework */; };
 		F0FC22691758F967005F804C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22681758F967005F804C /* Foundation.framework */; };
 		F0FC226B1758F967005F804C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC226A1758F967005F804C /* CoreGraphics.framework */; };
 		F0FC22901758FCD6005F804C /* ZFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC22861758FCB8005F804C /* ZFAppDelegate.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0F65F4D17A98C34008F87E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FC225B1758F967005F804C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FC22621758F967005F804C;
+			remoteInfo = ZFOpenWeatherMap;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F00E2CBF17A978F0008CA81E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -70,6 +85,12 @@
 		F0D74A8317B0488A00DA05FE /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
 		F0D74A8417B0488A00DA05FE /* ZFOpenWeatherMap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZFOpenWeatherMap-Prefix.pch"; sourceTree = "<group>"; };
 		F0DE348C17A973D500124438 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F0F65F3F17A98C33008F87E3 /* ZFOpenWeatherMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFOpenWeatherMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F65F4017A98C33008F87E3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F0F65F4617A98C34008F87E3 /* ZFOpenWeatherMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMapTests-Info.plist"; sourceTree = "<group>"; };
+		F0F65F4817A98C34008F87E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0F65F4A17A98C34008F87E3 /* ZFOpenWeatherMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFOpenWeatherMapTests.m; sourceTree = "<group>"; };
+		F0F65F4C17A98C34008F87E3 /* ZFOpenWeatherMapTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZFOpenWeatherMapTests-Prefix.pch"; sourceTree = "<group>"; };
 		F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFOpenWeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FC22661758F967005F804C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F0FC22681758F967005F804C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,6 +100,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F0F65F3C17A98C33008F87E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F65F4117A98C33008F87E3 /* XCTest.framework in Frameworks */,
+				F0F65F4317A98C34008F87E3 /* UIKit.framework in Frameworks */,
+				F0F65F4217A98C34008F87E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0FC22601758F967005F804C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +180,7 @@
 			path = Graphics;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		F0D74A7F17B0488A00DA05FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +190,25 @@
 				F0D74A8417B0488A00DA05FE /* ZFOpenWeatherMap-Prefix.pch */,
 			);
 			path = "Supporting Files";
+=======
+		F0F65F4417A98C34008F87E3 /* ZFOpenWeatherMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0F65F4A17A98C34008F87E3 /* ZFOpenWeatherMapTests.m */,
+				F0F65F4517A98C34008F87E3 /* Supporting Files */,
+			);
+			path = ZFOpenWeatherMapTests;
+			sourceTree = "<group>";
+		};
+		F0F65F4517A98C34008F87E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0F65F4617A98C34008F87E3 /* ZFOpenWeatherMapTests-Info.plist */,
+				F0F65F4717A98C34008F87E3 /* InfoPlist.strings */,
+				F0F65F4C17A98C34008F87E3 /* ZFOpenWeatherMapTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+>>>>>>> dev
 			sourceTree = "<group>";
 		};
 		F0FC225A1758F967005F804C = {
@@ -166,6 +217,7 @@
 				F0FC226C1758F967005F804C /* ZFOpenWeatherMap */,
 				F0FC22831758FAC7005F804C /* ZFOpenWeatherMap-Example */,
 				F048EEDC17590171005A1E0E /* Resources */,
+				F0F65F4417A98C34008F87E3 /* ZFOpenWeatherMapTests */,
 				F0FC22651758F967005F804C /* Frameworks */,
 				F0FC22641758F967005F804C /* Products */,
 			);
@@ -175,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */,
+				F0F65F3F17A98C33008F87E3 /* ZFOpenWeatherMapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +243,7 @@
 				F0FC22661758F967005F804C /* UIKit.framework */,
 				F0FC22681758F967005F804C /* Foundation.framework */,
 				F0FC226A1758F967005F804C /* CoreGraphics.framework */,
+				F0F65F4017A98C33008F87E3 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F0F65F3E17A98C33008F87E3 /* ZFOpenWeatherMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0F65F5117A98C34008F87E3 /* Build configuration list for PBXNativeTarget "ZFOpenWeatherMapTests" */;
+			buildPhases = (
+				F0F65F3B17A98C33008F87E3 /* Sources */,
+				F0F65F3C17A98C33008F87E3 /* Frameworks */,
+				F0F65F3D17A98C33008F87E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0F65F4E17A98C34008F87E3 /* PBXTargetDependency */,
+			);
+			name = ZFOpenWeatherMapTests;
+			productName = ZFOpenWeatherMapTests;
+			productReference = F0F65F3F17A98C33008F87E3 /* ZFOpenWeatherMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F0FC22621758F967005F804C /* ZFOpenWeatherMap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0FC22801758F967005F804C /* Build configuration list for PBXNativeTarget "ZFOpenWeatherMap" */;
@@ -246,6 +318,11 @@
 				CLASSPREFIX = ZF;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = ZFOpenWeatherMap;
+				TargetAttributes = {
+					F0F65F3E17A98C33008F87E3 = {
+						TestTargetID = F0FC22621758F967005F804C;
+					};
+				};
 			};
 			buildConfigurationList = F0FC225E1758F967005F804C /* Build configuration list for PBXProject "ZFOpenWeatherMap" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -260,11 +337,20 @@
 			projectRoot = "";
 			targets = (
 				F0FC22621758F967005F804C /* ZFOpenWeatherMap */,
+				F0F65F3E17A98C33008F87E3 /* ZFOpenWeatherMapTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F0F65F3D17A98C33008F87E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F65F4917A98C34008F87E3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0FC22611758F967005F804C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +364,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F0F65F3B17A98C33008F87E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F65F4B17A98C34008F87E3 /* ZFOpenWeatherMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0FC225F1758F967005F804C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +395,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F0F65F4E17A98C34008F87E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FC22621758F967005F804C /* ZFOpenWeatherMap */;
+			targetProxy = F0F65F4D17A98C34008F87E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F0D74A8017B0488A00DA05FE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -310,9 +412,72 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		F0F65F4717A98C34008F87E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0F65F4817A98C34008F87E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F0F65F4F17A98C34008F87E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFOpenWeatherMap.app/ZFOpenWeatherMap";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZFOpenWeatherMapTests/ZFOpenWeatherMapTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "ZFOpenWeatherMapTests/ZFOpenWeatherMapTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F0F65F5017A98C34008F87E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZFOpenWeatherMap.app/ZFOpenWeatherMap";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZFOpenWeatherMapTests/ZFOpenWeatherMapTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "ZFOpenWeatherMapTests/ZFOpenWeatherMapTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		F0FC227E1758F967005F804C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -406,6 +571,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F0F65F5117A98C34008F87E3 /* Build configuration list for PBXNativeTarget "ZFOpenWeatherMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0F65F4F17A98C34008F87E3 /* Debug */,
+				F0F65F5017A98C34008F87E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F0FC225E1758F967005F804C /* Build configuration list for PBXProject "ZFOpenWeatherMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

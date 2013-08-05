@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F0F65F3E17A98C33008F87E3"
+               BuildableName = "ZFOpenWeatherMapTests.xctest"
+               BlueprintName = "ZFOpenWeatherMapTests"
+               ReferencedContainer = "container:ZFOpenWeatherMap.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
