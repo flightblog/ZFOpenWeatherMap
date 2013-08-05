@@ -5,7 +5,7 @@ ZFOpenWeatherMap is a base template for accessing OpenWeatherMap's API using AFN
 
 As part of the [Objective-C Hackathon](https://objectivechackathon.appspot.com)
 
-Use at you're own risk. Codebase could change significantly.
+Codebase could change significantly.
 
 ### Dependancies ###
 AFNetworking
