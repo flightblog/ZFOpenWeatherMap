@@ -17,17 +17,16 @@
 		F00E2CD917A978F0008CA81E /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E2CCF17A978F0008CA81E /* AFXMLRequestOperation.m */; };
 		F00E2CDA17A978F0008CA81E /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E2CD117A978F0008CA81E /* UIImageView+AFNetworking.m */; };
 		F00E2CDC17A97999008CA81E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00E2CDB17A97999008CA81E /* Security.framework */; };
-		F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F048EEE017590171005A1E0E /* InfoPlist.strings */; };
-		F048EEE917590171005A1E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F048EEE217590171005A1E0E /* main.m */; };
 		F048EF0B1759051D005A1E0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */; };
 		F048EF0D17590536005A1E0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0C17590536005A1E0E /* SystemConfiguration.framework */; };
 		F048EF0F17590551005A1E0E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0E17590551005A1E0E /* CoreLocation.framework */; };
-		F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA881759076700A09038 /* Default-568h@2x.png */; };
-		F0C8CA8C1759076700A09038 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA891759076700A09038 /* Default.png */; };
-		F0C8CA8D1759076700A09038 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA8A1759076700A09038 /* Default@2x.png */; };
+		F0830C1617B04A79000389F2 /* main.m in Resources */ = {isa = PBXBuildFile; fileRef = F0D74A8217B0488A00DA05FE /* main.m */; };
+		F0830C1717B04A85000389F2 /* ZFOpenWeatherMap-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = F0D74A8417B0488A00DA05FE /* ZFOpenWeatherMap-Prefix.pch */; };
 		F0C8CA90175919F100A09038 /* ZFInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA8F175919F100A09038 /* ZFInterface.m */; };
 		F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA9217591DF000A09038 /* ZFClientAPI.m */; };
 		F0C8CA96175920E500A09038 /* ZFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA95175920E500A09038 /* ZFRootViewController.m */; };
+		F0D74A8517B0488A00DA05FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0D74A8017B0488A00DA05FE /* InfoPlist.strings */; };
+		F0D74A8617B0488A00DA05FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D74A8217B0488A00DA05FE /* main.m */; };
 		F0DE348D17A973D500124438 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0DE348C17A973D500124438 /* CFNetwork.framework */; };
 		F0FC22671758F967005F804C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22661758F967005F804C /* UIKit.framework */; };
 		F0FC22691758F967005F804C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC22681758F967005F804C /* Foundation.framework */; };
@@ -56,22 +55,20 @@
 		F00E2CD017A978F0008CA81E /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		F00E2CD117A978F0008CA81E /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F00E2CDB17A97999008CA81E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F048EEE117590171005A1E0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F048EEE217590171005A1E0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
-		F048EEE417590171005A1E0E /* ZFOpenWeatherMap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZFOpenWeatherMap-Prefix.pch"; sourceTree = "<group>"; };
 		F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F048EF0C17590536005A1E0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F048EF0E17590551005A1E0E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F0C8CA881759076700A09038 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F0C8CA891759076700A09038 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F0C8CA8A1759076700A09038 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F0C8CA8E175919F100A09038 /* ZFInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFInterface.h; sourceTree = "<group>"; };
 		F0C8CA8F175919F100A09038 /* ZFInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFInterface.m; sourceTree = "<group>"; };
 		F0C8CA9117591DF000A09038 /* ZFClientAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFClientAPI.h; sourceTree = "<group>"; };
 		F0C8CA9217591DF000A09038 /* ZFClientAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFClientAPI.m; sourceTree = "<group>"; };
 		F0C8CA94175920E500A09038 /* ZFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFRootViewController.h; sourceTree = "<group>"; };
 		F0C8CA95175920E500A09038 /* ZFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFRootViewController.m; sourceTree = "<group>"; };
+		F0D74A8117B0488A00DA05FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0D74A8217B0488A00DA05FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0D74A8317B0488A00DA05FE /* ZFOpenWeatherMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZFOpenWeatherMap-Info.plist"; sourceTree = "<group>"; };
+		F0D74A8417B0488A00DA05FE /* ZFOpenWeatherMap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZFOpenWeatherMap-Prefix.pch"; sourceTree = "<group>"; };
 		F0DE348C17A973D500124438 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F0FC22631758F967005F804C /* ZFOpenWeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFOpenWeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FC22661758F967005F804C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -132,10 +129,6 @@
 			children = (
 				F048EEEC175904E8005A1E0E /* Vender */,
 				F0C8CA871759072F00A09038 /* Graphics */,
-				F048EEE017590171005A1E0E /* InfoPlist.strings */,
-				F048EEE217590171005A1E0E /* main.m */,
-				F048EEE317590171005A1E0E /* ZFOpenWeatherMap-Info.plist */,
-				F048EEE417590171005A1E0E /* ZFOpenWeatherMap-Prefix.pch */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,10 +145,19 @@
 			isa = PBXGroup;
 			children = (
 				F0C8CA881759076700A09038 /* Default-568h@2x.png */,
-				F0C8CA891759076700A09038 /* Default.png */,
-				F0C8CA8A1759076700A09038 /* Default@2x.png */,
 			);
 			path = Graphics;
+			sourceTree = "<group>";
+		};
+		F0D74A7F17B0488A00DA05FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0D74A8017B0488A00DA05FE /* InfoPlist.strings */,
+				F0D74A8217B0488A00DA05FE /* main.m */,
+				F0D74A8317B0488A00DA05FE /* ZFOpenWeatherMap-Info.plist */,
+				F0D74A8417B0488A00DA05FE /* ZFOpenWeatherMap-Prefix.pch */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F0FC225A1758F967005F804C = {
@@ -206,6 +208,7 @@
 		F0FC22831758FAC7005F804C /* ZFOpenWeatherMap-Example */ = {
 			isa = PBXGroup;
 			children = (
+				F0D74A7F17B0488A00DA05FE /* Supporting Files */,
 				F0FC22851758FCB7005F804C /* ZFAppDelegate.h */,
 				F0FC22861758FCB8005F804C /* ZFAppDelegate.m */,
 				F0C8CA94175920E500A09038 /* ZFRootViewController.h */,
@@ -266,10 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F048EEE817590171005A1E0E /* InfoPlist.strings in Resources */,
-				F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */,
-				F0C8CA8C1759076700A09038 /* Default.png in Resources */,
-				F0C8CA8D1759076700A09038 /* Default@2x.png in Resources */,
+				F0830C1717B04A85000389F2 /* ZFOpenWeatherMap-Prefix.pch in Resources */,
+				F0830C1617B04A79000389F2 /* main.m in Resources */,
+				F0D74A8517B0488A00DA05FE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +284,6 @@
 			files = (
 				F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */,
 				F0FC22901758FCD6005F804C /* ZFAppDelegate.m in Sources */,
-				F048EEE917590171005A1E0E /* main.m in Sources */,
 				F0C8CA90175919F100A09038 /* ZFInterface.m in Sources */,
 				F0C8CA96175920E500A09038 /* ZFRootViewController.m in Sources */,
 				F00E2CD217A978F0008CA81E /* AFHTTPClient.m in Sources */,
@@ -290,6 +291,7 @@
 				F00E2CD417A978F0008CA81E /* AFImageRequestOperation.m in Sources */,
 				F00E2CD517A978F0008CA81E /* AFJSONRequestOperation.m in Sources */,
 				F00E2CD617A978F0008CA81E /* AFNetworkActivityIndicatorManager.m in Sources */,
+				F0D74A8617B0488A00DA05FE /* main.m in Sources */,
 				F00E2CD717A978F0008CA81E /* AFPropertyListRequestOperation.m in Sources */,
 				F00E2CD817A978F0008CA81E /* AFURLConnectionOperation.m in Sources */,
 				F00E2CD917A978F0008CA81E /* AFXMLRequestOperation.m in Sources */,
@@ -300,10 +302,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F048EEE017590171005A1E0E /* InfoPlist.strings */ = {
+		F0D74A8017B0488A00DA05FE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F048EEE117590171005A1E0E /* en */,
+				F0D74A8117B0488A00DA05FE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -378,8 +380,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
-				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
+				GCC_PREFIX_HEADER = "ZFOpenWeatherMap-Example/Supporting Files/ZFOpenWeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "ZFOpenWeatherMap-Example/Supporting Files/ZFOpenWeatherMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,8 +396,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/ZFOpenWeatherMap-Prefix.pch";
-				INFOPLIST_FILE = "Resources/ZFOpenWeatherMap-Info.plist";
+				GCC_PREFIX_HEADER = "ZFOpenWeatherMap-Example/Supporting Files/ZFOpenWeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "ZFOpenWeatherMap-Example/Supporting Files/ZFOpenWeatherMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
