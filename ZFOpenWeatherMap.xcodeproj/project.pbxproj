@@ -20,7 +20,7 @@
 		F048EF0B1759051D005A1E0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */; };
 		F048EF0D17590536005A1E0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0C17590536005A1E0E /* SystemConfiguration.framework */; };
 		F048EF0F17590551005A1E0E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F048EF0E17590551005A1E0E /* CoreLocation.framework */; };
-		F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C8CA881759076700A09038 /* Default-568h@2x.png */; };
+		F07D3B1717B18697005C1E4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07D3B1617B18697005C1E4E /* Default-568h@2x.png */; };
 		F0C8CA90175919F100A09038 /* ZFInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA8F175919F100A09038 /* ZFInterface.m */; };
 		F0C8CA9317591EFE00A09038 /* ZFClientAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA9217591DF000A09038 /* ZFClientAPI.m */; };
 		F0C8CA96175920E500A09038 /* ZFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8CA95175920E500A09038 /* ZFRootViewController.m */; };
@@ -57,9 +57,7 @@
 		F048EF0A1759051D005A1E0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F048EF0C17590536005A1E0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F048EF0E17590551005A1E0E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F0C8CA881759076700A09038 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F0C8CA891759076700A09038 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F0C8CA8A1759076700A09038 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F07D3B1617B18697005C1E4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0C8CA8E175919F100A09038 /* ZFInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFInterface.h; sourceTree = "<group>"; };
 		F0C8CA8F175919F100A09038 /* ZFInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFInterface.m; sourceTree = "<group>"; };
 		F0C8CA9117591DF000A09038 /* ZFClientAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFClientAPI.h; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				F048EEEC175904E8005A1E0E /* Vender */,
-				F0C8CA871759072F00A09038 /* Graphics */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -142,14 +139,13 @@
 			path = Vender;
 			sourceTree = "<group>";
 		};
-		F0C8CA871759072F00A09038 /* Graphics */ = {
+		F07D3B1517B18697005C1E4E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				F0C8CA881759076700A09038 /* Default-568h@2x.png */,
-				F0C8CA891759076700A09038 /* Default.png */,
-				F0C8CA8A1759076700A09038 /* Default@2x.png */,
+				F07D3B1617B18697005C1E4E /* Default-568h@2x.png */,
 			);
-			path = Graphics;
+			name = Graphics;
+			path = "Supporting Files/Graphics";
 			sourceTree = "<group>";
 		};
 		F0CEED3517B05486009639A2 /* Supporting Files */ = {
@@ -211,6 +207,7 @@
 		F0FC22831758FAC7005F804C /* ZFOpenWeatherMap-Example */ = {
 			isa = PBXGroup;
 			children = (
+				F07D3B1517B18697005C1E4E /* Graphics */,
 				F0CEED3517B05486009639A2 /* Supporting Files */,
 				F0FC22851758FCB7005F804C /* ZFAppDelegate.h */,
 				F0FC22861758FCB8005F804C /* ZFAppDelegate.m */,
@@ -273,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CEED3C17B0551A009639A2 /* ZFOpenWeatherMap-Prefix.pch in Resources */,
-				F0C8CA8B1759076700A09038 /* Default-568h@2x.png in Resources */,
+				F07D3B1717B18697005C1E4E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
