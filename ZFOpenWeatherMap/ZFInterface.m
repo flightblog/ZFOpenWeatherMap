@@ -114,8 +114,6 @@
 - (void)retrieveCurrentWeather
 {
     
-    NSLog(@"cache %i", _cacheInSeconds);
-    
     // Retrieve currentWX JSON from disk
     NSString *cachedWX = [[self.paths objectAtIndex:0] stringByAppendingPathComponent:@"currentJSON.plist"];
     
@@ -133,7 +131,7 @@
         NSDate *now = [NSDate new];
         NSTimeInterval diff = [now timeIntervalSinceDate:reportTimeStamp];
         
-        NSLog(@"current:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
+        NSLog(@"currentCACHE:%@ NOW:%@ DIFF:%f", reportTimeStamp, now, diff);
         
         if (diff > _cacheInSeconds) {
             NSLog(@"current:accessing network");
@@ -174,7 +172,7 @@
         NSDate *now = [NSDate new];
         NSTimeInterval diff = [now timeIntervalSinceDate:reportTimeStamp];
         
-        NSLog(@"forecast:cache:%@ now:%@ diff:%f", reportTimeStamp, now, diff);
+        NSLog(@"forecastCACHE:%@ NOW:%@ DIFF:%f", reportTimeStamp, now, diff);
         
         if (diff > _cacheInSeconds) {
             NSLog(@"forecast:accessing network");
@@ -263,32 +261,5 @@
 
 
 }
-
-
-
-//-(void)getCurrentConditionsForLatitude:(double)lat
-//                             longitude:(double)lon
-//                               success:(void (^)(NSMutableDictionary *responseDict))success
-//                               failure:(void (^)(NSError *error))failure {
-//    
-//    
-//    
-//    
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.forecast.io/forecast/%@/%.6f,%.6f", self.apiKey, lat, lon]];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-//        
-//        success([NSMutableDictionary dictionaryWithDictionary:[JSON objectForKey:@"currently"]]);
-//        
-//    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
-//        
-//        failure(error);
-//       
-//        
-//    }];
-//    [operation start];
-//}
-
-
 
 @end
