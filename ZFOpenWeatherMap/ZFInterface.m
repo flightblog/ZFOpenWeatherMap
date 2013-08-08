@@ -134,7 +134,7 @@
         NSLog(@"currentCACHE:%@ NOW:%@ DIFF:%f", reportTimeStamp, now, diff);
         
         if (diff > _cacheInSeconds) {
-            NSLog(@"current:accessing network");
+            //NSLog(@"current:accessing network");
             
             if (!_APIKey) {
                 [self getCurrentWithURL:self.urlForCurrentWXwithoutAPIKey];
@@ -175,7 +175,7 @@
         NSLog(@"forecastCACHE:%@ NOW:%@ DIFF:%f", reportTimeStamp, now, diff);
         
         if (diff > _cacheInSeconds) {
-            NSLog(@"forecast:accessing network");
+            //NSLog(@"forecast:accessing network");
             
             if (!_APIKey) {
                 [self getForecastWithURL:self.urlForForecastWXwithoutAPIKey];
